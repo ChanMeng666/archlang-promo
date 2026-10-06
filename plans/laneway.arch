@@ -1,0 +1,41 @@
+# A one-bedroom laneway cottage. Nothing is placed by hand.
+plan "Laneway House" {
+  units mm
+  grid 50
+  dims auto all
+  let W = 4200        # living-room width
+  let L = W + 3300    # overall length
+  let D = 6500        # depth
+
+  wall id=north exterior thickness 200 { (0,0) (L,0) }
+  wall id=east  exterior thickness 200 { (L,0) (L,D) }
+  wall id=south exterior thickness 200 { (0,D) (L,D) }
+  wall id=west  exterior thickness 200 { (0,0) (0,D) }
+  wall id=hall  partition thickness 100 { (W,0) (W,D) }
+  wall id=wet   partition thickness 100 { (W,2500) (L,2500) }
+
+  room id=live at (0,0) size W x D label "Living" uses living
+  strip down at (W,0) gap 0 width 3300 {
+    room id=bath size 2500 label "Bath" uses bath
+    room id=bed  size 4000 label "Bedroom" uses bedroom
+  }
+
+  door on north at 2100 width 900 swing into live
+  door sliding on south at 2700 width 1800 slide left
+  door on hall at 5600 width 800 hinge left swing into bed
+  door pocket on hall at 900 width 800 slide right
+  window on west at 2400 width 1200
+  window on south at W + 1650 width 1600
+  window on east at 1250 width 600
+
+  furniture fridge against wall west offset 400 in live
+  furniture stove against wall west offset 1200 in live
+  furniture kitchen_sink against wall west offset 2000 in live
+  furniture table in live centered size 1300x900
+  furniture sofa in live anchor right flush size 900x2000
+  furniture bed against wall east offset 4500 in bed
+  furniture wardrobe in bed anchor top flush size 1800x600
+  furniture shower in bath anchor top-right flush size 900x900
+  furniture wc in bath anchor bottom-left flush size 400x700
+  furniture basin against wall wet offset 2300 in bath
+}

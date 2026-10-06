@@ -1,0 +1,34 @@
+{
+  "name": "archlang-promo",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "The ArchLang promo film. A coded replica of the playground, with every plan on screen compiled by the real compiler, frame by frame.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "typecheck": "tsc",
+    "bake": "node tools/bake.mjs",
+    "audio": "node tools/synth-audio.mjs",
+    "verify": "node tools/verify.mjs",
+    "stills": "node tools/stills.mjs",
+    "render": "pwsh -File ./render.ps1"
+  },
+  "dependencies": {
+    "@chanmeng666/archlang": "file:vendor/chanmeng666-archlang-1.41.0.tgz",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@remotion/cli": "4.0.522",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.522"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  }
+}
