@@ -12,7 +12,11 @@
 
 ### ArchLang film
 
-<!-- FILM: archlang-film · 16:9 · 68 s — Chan uploads the video here in GitHub's web editor -->
+
+
+https://github.com/user-attachments/assets/6e8677ed-7bc1-4115-b238-0c0cb51acfb2
+
+
 
 ▶ Watch on YouTube: https://youtu.be/RBcGF6X4esY
 
